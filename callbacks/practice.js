@@ -124,13 +124,16 @@ contains(names, 'Colt', function(result){
 
 
 
-function uniq(array, callback){
-      array.filter((i, index) => {
-    return array.indexOf(i) === index;
+function uniq(arr, cb){
+  for(let i = 0; i < arr.length; i++){
+    for( let j = i + 1; j < arr.length; j++){
+      if(arr[i] === arr[j]){
+        arr.splice(j,1)
+      }
+    }
   }
-  )
-  return callback(array)
-} 
+  cb(arr)
+}
 
 
 // // Do not edit the code below.
@@ -148,9 +151,13 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-function each(names, callback){
-  names.forEach(callback(names, ))
-}
+function each(arr, cb){
+  for (i = 0; i = arr.length; i++){
+    forEach(arr[i])
+      return cb(arr[i])
+    }
+  }
+  
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -168,7 +175,7 @@ each(names, function(item, indice){
 */
 
 function getUserById(users, id, callback){
-
+  return callback(users.id, id)
 }
 
 // Do not edit the code below.

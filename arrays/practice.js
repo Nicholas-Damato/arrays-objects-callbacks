@@ -21,7 +21,7 @@ let first = function(arr){
   return arr[0];
 }
 
-// console.log(first(arr))
+ console.log(first(arr))
 
 ////////// PROBLEM 2 //////////
 
@@ -96,7 +96,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 function evenFinder(nums){
   let emptyArr = []
   for (let i = 0; i < nums.length; i++){
-   if ( nums[i] % 2 === 0) {
+   if ( nums[i] % 2 === 0) {    // replace === with !== to find the odd numbers
       emptyArr.push(nums[i])
    }
   }
